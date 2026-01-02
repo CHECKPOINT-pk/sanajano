@@ -39,7 +39,6 @@ RESET = "\033[0m"
 # Optional: max attempts and cooldown
 MAX_ATTEMPTS = 3
 COOLDOWN_SECONDS = 8
-
 def clear_screen():
     os.system("clear")
 
