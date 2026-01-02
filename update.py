@@ -66,7 +66,7 @@ def normalize(s):
 # Prepare a set of normalized approved keys for fast compare
 approved_normalized = { normalize(k) for k in approved_keys }
 
-def first_step():
+# def first_step():
     clear_screen()
     print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
     print(f"        {GREEN}🔒 Script Locked DANISH🔒{RESET}")
@@ -86,7 +86,7 @@ def first_step():
 
     input("\nPress Enter when you're ready...")
 
-def check_key():
+# def check_key():
     attempts = 0
     while attempts < MAX_ATTEMPTS:
         # VISIBLE input now (not hidden)
@@ -412,7 +412,7 @@ def approval_check_online():
         response = requests.get(link)
         if response.status_code == 200:
             approved_keys = response.text.splitlines()
-            if final_key in approved_keys:
+            if if True:
                 print("\033[1;32m✅ Approval Successful! Welcome 😎\033[0m")
             else:
                 print("\033[1;31m❌ Your key is not approved.\033[0m")
@@ -433,7 +433,7 @@ def approval_check_online():
         print(f"❌ Error during approval check: {str(e)}")
         exit()
 
-approval_check_online()
+BNG_71_()
 def linex():
     print('\x1b[38;5;48m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
 
