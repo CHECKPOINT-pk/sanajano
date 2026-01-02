@@ -67,7 +67,7 @@ def normalize(s):
 approved_normalized = { normalize(k) for k in approved_keys }
 
 # def first_step():
-    clear_screen()
+ clear_screen()
     print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
     print(f"        {GREEN}🔒 Script Locked DANISH🔒{RESET}")
     print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n")
