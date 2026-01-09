@@ -275,7 +275,7 @@ if random.choice([True, False]):
     fbav = f"{fb_major}.0.0.{random.randint(10, 99)}.{random.randint(100, 999)}"
     fban = random.choice(fban_types)
 
-        Ua = (
+ Ua = (
     f"Mozilla/5.0 (Linux; Android {ver}; {model} Build/QP1A.190711.020; wv) "
     f"AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 "
     f"Chrome/{chrome_ver} Mobile Safari/537.36 "
