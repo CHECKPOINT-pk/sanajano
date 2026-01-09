@@ -249,7 +249,7 @@ fban_types = [
     "FBAN/Sparkle",    # Facebook for Apple Watch / Wearables
 ]
 
-    if random.choice([True, False]):
+if random.choice([True, False]):
     # -------- Android UA (2008 - 2026) --------
     model, brand, ver = random.choice(android_models)
     
