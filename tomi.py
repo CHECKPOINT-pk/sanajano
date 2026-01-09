@@ -224,7 +224,7 @@ iphone_models = [
     ("iPhone18,3", "19.0"),    # iPhone 17 Slim/Air
     ("iPhone18,4", "19.0"),    # iPhone 17 Pro Max
 ]
-    fban_types = [
+fban_types = [
     # --- Primary Apps ---
     "FB4A",            # Facebook for Android
     "FBIOS",           # Facebook for iOS
