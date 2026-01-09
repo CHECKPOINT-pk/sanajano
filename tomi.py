@@ -278,8 +278,7 @@ if random.choice([True, False]):
         f"AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 "
         f"Chrome/{chrome_ver} Mobile Safari/537.36 "
         f"[FBAN/{fban};FBAV/{fbav};FBDV/{model};"
-        f"FBMF/{brand};FBBD/{brand};FBSV/{ver};FBOP/{random.randint(1,5)};FBCR/{random.choice(['Jazz','Zong','Telenor','Ufone','Airtel','Jio','MTN'])}]"
-    )
+        f"FBMF/{brand};FBBD/{brand};FBSV/{ver};FBOP/{random.randint(1,5)};FBCR/{random.choice(['Jazz','Zong','Telenor','Ufone','Airtel','Jio','MTN'])}]")
     else:
         # -------- iPhone UA --------
         model, ios_ver = random.choice(iphone_models)
