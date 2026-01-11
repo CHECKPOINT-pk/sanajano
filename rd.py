@@ -800,7 +800,7 @@ def rndm(ids,passlist):
                                 "X-FB-SIM-HNI": str(random.randint(20000, 40000)),
                                 'X-FB-Friendly-Name':'authenticate',
                                 'X-FB-Connection-Type':'unknown',
-                                'User-Agent': '[FBAN/FB4A;FBAV/520.0.0.68.112;FBBV/738291405;FBDM/{density=3.0,width=1080,height=2280};FBLC/en_US;FBRV/742109532;FBCR/Verizon;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-S928U;FBSV/14;FBOP/1;FBCA/arm64-v8a:;]'
+                                'User-Agent': '[FBAN/FB4A;FBAV/520.0.0.68.112;FBBV/738291405;FBDM/{density=3.0,width=1080,height=2280};FBLC/en_US;FBRV/742109532;FBCR/Verizon;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-S928U;FBSV/14;FBOP/1;FBCA/arm64-v8a:;]',
                                 'Accept-Encoding':'gzip, deflate',
                                 'Content-Type': 'application/x-www-form-urlencoded',
                                 'X-FB-HTTP-Engine': 'Liger'
